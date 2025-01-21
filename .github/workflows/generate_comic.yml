@@ -1,8 +1,9 @@
-name: Generate Comics
+name: Generate New Comic
 
 on:
-  schedule:
-    - cron: '0 0 * * 0'  # Runs every Sunday at midnight UTC; adjust as needed
+#  schedule:
+#    - cron: '0 0 * * 0'  # Runs every Sunday at midnight UTC; adjust as needed
+  workflow_dispatch:
 
 jobs:
   generate-comic:
