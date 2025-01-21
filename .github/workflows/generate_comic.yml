@@ -20,15 +20,18 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Compile TypeScript
+        run: npm run build
+
       - name: Generate comic
-        run: node scripts/generateComic.js
+        run: npm run generateComic
 
       - name: Commit and push changes
         run: |
-          git config user.name "GitHub Action"
-          git config user.email "action@github.com"
+          git config user.name "Scrapinold Robot"
+          git config user.email "hd_dvd@scrapinold.com"
           git add .
-          git commit -m "Add new comic"
+          git commit -m "NEW COMIC"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

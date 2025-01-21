@@ -13,7 +13,7 @@ async function generateComic() {
   try {
     // Step 1: Generate comic text and images using OpenAI API
     const response = await axios.post<OpenAIResponse>(
-      'https://api.openai.com/v1/images/generate',
+      'https://api.openai.com/v1/images/generations',
       {
         prompt: "A humorous short comic about a talking cat and a robot.",
         n: 1,
